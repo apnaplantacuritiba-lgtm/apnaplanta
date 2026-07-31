@@ -1,0 +1,76 @@
+:root{
+  --green:#183d31;
+  --green-2:#244f41;
+  --gold:#b69a59;
+  --cream:#f7f5ef;
+  --ink:#1d2622;
+  --muted:#69736e;
+  --line:#e6e8e4;
+  --white:#ffffff;
+  --shadow:0 18px 50px rgba(20,54,43,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+.eyebrow{font-size:.77rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(230,232,228,.85)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:58px;height:58px;object-fit:contain}
+.brand-text{line-height:1.12}
+.brand-text strong{display:block;font-family:Georgia,serif;letter-spacing:.05em;color:var(--green);font-size:.96rem}
+.brand-text span{font-size:.68rem;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.91rem;color:#3f4944}
+.nav-links a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:999px;background:var(--green);color:white;font-weight:700;box-shadow:0 8px 20px rgba(24,61,49,.18);transition:.2s ease}
+.btn:hover{transform:translateY(-1px);background:var(--green-2)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.55);box-shadow:none}
+.hero{position:relative;min-height:610px;display:grid;align-items:center;background:url('assets/hero.jpg') center/cover no-repeat;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,49,39,.96) 0%,rgba(18,49,39,.80) 40%,rgba(18,49,39,.18) 74%,rgba(18,49,39,.05) 100%)}
+.hero-content{position:relative;z-index:1;color:white;padding:90px 0;max-width:670px}
+.hero h1{font-family:Georgia,serif;font-size:clamp(2.5rem,5vw,5rem);line-height:1.03;margin:12px 0 22px;font-weight:500}
+.hero p{max-width:610px;font-size:1.1rem;color:rgba(255,255,255,.86);margin:0 0 32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:28px;font-size:.8rem;letter-spacing:.06em;color:rgba(255,255,255,.68)}
+.section{padding:92px 0}
+.section.soft{background:var(--cream)}
+.section-head{max-width:760px;margin-bottom:48px}
+.section h2{font-family:Georgia,serif;font-size:clamp(2rem,3.5vw,3.45rem);line-height:1.12;color:var(--green);font-weight:500;margin:10px 0 16px}
+.section-head p{color:var(--muted);font-size:1.04rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 10px 30px rgba(16,42,34,.05)}
+.card .num{font-family:Georgia,serif;font-size:2rem;color:var(--gold);margin-bottom:16px}
+.card h3{margin:0 0 10px;color:var(--green);font-size:1.05rem}
+.card p{margin:0;color:var(--muted);font-size:.94rem}
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+.about-panel{background:var(--green);color:white;border-radius:24px;padding:48px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.about-panel:after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(182,154,89,.35);border-radius:50%;right:-70px;bottom:-90px}
+.about-panel h3{font-family:Georgia,serif;font-size:2rem;margin:0 0 18px;font-weight:500}
+.about-panel p{color:rgba(255,255,255,.78)}
+.checks{display:grid;gap:12px;margin-top:24px}
+.check{display:flex;gap:10px;align-items:flex-start}
+.check b{color:var(--gold)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.contact-box{border-radius:22px;padding:42px;background:var(--green);color:white}
+.contact-box h3{font-family:Georgia,serif;font-size:2rem;margin:0 0 12px;font-weight:500}
+.contact-box p{color:rgba(255,255,255,.78)}
+.contact-list{display:grid;gap:16px;margin-top:26px}
+.contact-list a{padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.16)}
+.legal-box{border:1px solid var(--line);border-radius:22px;padding:42px;background:#fff}
+.legal-box h3{font-family:Georgia,serif;color:var(--green);font-size:1.8rem;margin-top:0;font-weight:500}
+.legal-links{display:grid;gap:12px;margin-top:24px}
+.legal-links a{padding:14px 16px;background:var(--cream);border-radius:10px;font-weight:700;color:var(--green)}
+.footer{background:#102f26;color:rgba(255,255,255,.72);padding:46px 0 26px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px;padding-bottom:30px}
+.footer strong{color:white}.footer small{display:block;color:rgba(255,255,255,.52)}
+.footer-bottom{padding-top:20px;border-top:1px solid rgba(255,255,255,.10);display:flex;justify-content:space-between;gap:20px;font-size:.82rem}
+.legal-page{padding:70px 0 90px}.legal-page article{max-width:860px;margin:auto}.legal-page h1{font-family:Georgia,serif;color:var(--green);font-size:clamp(2.3rem,5vw,4rem);line-height:1.08}.legal-page h2{font-family:Georgia,serif;color:var(--green);margin-top:38px}.legal-page p,.legal-page li{color:#4d5853}.back{display:inline-block;margin-bottom:24px;color:var(--green);font-weight:700}
+.menu-btn{display:none;border:0;background:none;font-size:1.5rem;color:var(--green)}
+@media(max-width:860px){
+ .nav-links{display:none}.menu-btn{display:block}.hero{min-height:560px;background-position:62% center}.hero:before{background:linear-gradient(90deg,rgba(18,49,39,.96),rgba(18,49,39,.82) 70%,rgba(18,49,39,.45))}
+ .grid-3,.about,.contact,.footer-grid{grid-template-columns:1fr}.section{padding:72px 0}.about{gap:28px}.footer-bottom{flex-direction:column}
+}
+@media(max-width:520px){.container{width:min(100% - 28px,1160px)}.brand-text{display:none}.hero-content{padding:72px 0}.hero-actions{flex-direction:column;align-items:stretch}.btn{width:100%}.card,.about-panel,.contact-box,.legal-box{padding:26px}}
