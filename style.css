@@ -586,7 +586,8 @@ h3 {
   background-image: url("hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #173b31;
 }
 
 .partnership-panel {
