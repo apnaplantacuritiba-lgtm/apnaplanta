@@ -917,112 +917,33 @@ h3 {
    Fundo também verde e totalmente uniforme
    ========================================================== */
 
+/* IMAGEM DA PARCERIA INTEIRA NO CELULAR */
+
 @media (max-width: 860px) {
 
-  html {
-    scroll-padding-top: 110px;
-  }
-
-  .site-header,
-  .site-header .container,
-  .nav-wrap,
-  .brand,
-  .brand img {
-    background: var(--green);
-  }
-
-  .nav-wrap {
-    position: relative;
-
-    min-height: 112px;
-    gap: 18px;
-  }
-
-  .brand {
-    width: 235px;
-    height: 102px;
-  }
-
-  .brand img {
-    height: 98px;
-  }
-
-  .menu-toggle {
+  .image-section {
     display: block;
+    min-height: auto;
+    background: #0f2b23;
   }
 
-  .main-nav {
-    position: absolute;
-    top: calc(100% + 1px);
-    left: 0;
-    right: 0;
-
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 5px;
-
-    padding: 20px;
-
-    color: var(--white);
-    background: var(--green);
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-top: 0;
-    border-radius: 0 0 20px 20px;
-
-    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.20);
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
-
-  .main-nav > a:not(.button) {
+  .image-panel {
     width: 100%;
-    padding: 13px 5px;
+    min-height: 0;
 
-    color: var(--white);
-    background: transparent;
+    aspect-ratio: 16 / 9;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    background-image: url("hero.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #173b31;
   }
 
-  .main-nav > a:not(.button)::after {
-    display: none;
-  }
-
-  .main-nav .button {
+  .partnership-panel {
     width: 100%;
-    margin-top: 8px;
+    padding: 55px 28px 75px;
   }
-
-  .split-grid,
-  .contact-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    min-height: 690px;
-  }
-
-  .hero-overlay {
-    background: rgba(10, 30, 24, 0.76);
-  }
-
-  .section {
-    padding: 78px 0;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-  }
-
-  .disclaimer {
-    text-align: left;
-  }
-
 }
 
 
