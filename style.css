@@ -1091,3 +1091,358 @@ button {
     transition: none;
   }
 }
+
+/* ==========================================================
+   PADRONIZAÇÃO FINAL — VERDE ESCURO E RESPONSIVIDADE
+   Cole no FINAL do style.css
+   ========================================================== */
+
+:root {
+  --verde: #0f2b23;
+  --verde-hover: #173b31;
+  --verde-escuro: #0f2b23;
+}
+
+/* Evita qualquer conteúdo ultrapassando a tela */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Todos os fundos institucionais com o mesmo verde escuro */
+.site-header,
+.site-header .container,
+.nav-wrap,
+.brand,
+.brand img,
+.main-nav,
+.image-section,
+.partnership-panel,
+.site-footer {
+  background-color: #0f2b23 !important;
+}
+
+/* Cabeçalho totalmente uniforme */
+.site-header {
+  background: #0f2b23 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* Logo sem qualquer retângulo ou fundo diferente */
+.brand,
+.brand img {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Menu desktop */
+.main-nav {
+  background: transparent !important;
+}
+
+.main-nav > a:not(.button) {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+.main-nav > a:not(.button):hover {
+  color: #d4bc82 !important;
+}
+
+/* Botão de WhatsApp no cabeçalho */
+.main-nav .button,
+.main-nav .button-small {
+  color: #0f2b23 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.main-nav .button:hover,
+.main-nav .button-small:hover {
+  color: #ffffff !important;
+  background: #ad8c45 !important;
+  border-color: #ad8c45 !important;
+}
+
+/* Seção da parceria */
+.image-section,
+.partnership-panel {
+  background: #0f2b23 !important;
+}
+
+/* Área em volta da imagem também no mesmo verde */
+.image-panel {
+  background-color: #0f2b23 !important;
+}
+
+/* Rodapé uniforme */
+.site-footer {
+  background: #0f2b23 !important;
+}
+
+/* Logo do rodapé sem fundo branco */
+.footer-logo {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Botão flutuante */
+.floating-whatsapp {
+  background: #0f2b23 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+}
+
+.floating-whatsapp:hover {
+  background: #ad8c45 !important;
+}
+
+
+/* ==========================================================
+   TABLETS E SMARTPHONES
+   ========================================================== */
+
+@media screen and (max-width: 980px) {
+
+  html {
+    scroll-padding-top: 96px;
+  }
+
+  body {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+
+  .site-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .site-header .container {
+    width: 100%;
+    max-width: none;
+    padding-inline: 16px;
+  }
+
+  .nav-wrap {
+    position: relative;
+    min-height: 96px;
+  }
+
+  .brand {
+    width: 190px;
+    max-width: calc(100% - 108px);
+  }
+
+  .brand img {
+    width: 100%;
+    height: 84px;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  /* Mostra somente o botão Menu */
+  .menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 86px;
+    min-height: 46px;
+    padding: 8px 16px;
+
+    color: #ffffff;
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Menu fechado */
+  .main-nav {
+    position: fixed !important;
+    top: 96px;
+    right: 14px;
+    left: 14px;
+    z-index: 11000;
+
+    width: auto;
+    max-height: calc(100dvh - 116px - env(safe-area-inset-bottom));
+
+    display: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+
+    padding: 12px 18px 18px;
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    background: #0f2b23 !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 0 0 20px 20px;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.30);
+  }
+
+  /* Menu aberto pelo script.js */
+  .main-nav.open {
+    display: flex !important;
+  }
+
+  /* Todos os links visíveis */
+  .main-nav > a,
+  .main-nav > a:not(.button) {
+    width: 100% !important;
+    padding: 15px 4px !important;
+
+    display: block !important;
+
+    color: #ffffff !important;
+    background: transparent !important;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+
+    font-size: 17px;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .main-nav > a:not(.button)::after {
+    display: none !important;
+  }
+
+  .main-nav .button {
+    width: 100% !important;
+    min-height: 50px;
+    margin-top: 14px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    color: #0f2b23 !important;
+    background: #ffffff !important;
+  }
+
+  /* Compensa o cabeçalho fixo */
+  .hero {
+    margin-top: 96px;
+  }
+
+  /* Imagem da parceria inteira */
+  .image-section {
+    display: block !important;
+    min-height: auto !important;
+  }
+
+  .image-panel {
+    width: 100%;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("hero.jpg");
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-color: #0f2b23 !important;
+  }
+
+  .partnership-panel {
+    width: 100%;
+    min-height: auto !important;
+    padding: 58px 24px 105px;
+  }
+
+  /* CTA sempre acessível */
+  .floating-whatsapp {
+    position: fixed !important;
+    right: 16px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    left: 16px;
+    z-index: 20000;
+
+    width: auto;
+    min-height: 58px;
+    padding: 12px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.30);
+  }
+
+  .site-footer {
+    padding-bottom: calc(110px + env(safe-area-inset-bottom));
+  }
+}
+
+
+/* ==========================================================
+   SMARTPHONES PEQUENOS
+   ========================================================== */
+
+@media screen and (max-width: 480px) {
+
+  .site-header .container {
+    padding-inline: 13px;
+  }
+
+  .nav-wrap {
+    min-height: 92px;
+    gap: 10px;
+  }
+
+  .brand {
+    width: 175px;
+    max-width: calc(100% - 100px);
+  }
+
+  .brand img {
+    height: 80px;
+  }
+
+  .menu-toggle {
+    min-width: 80px;
+    min-height: 44px;
+    padding: 7px 13px;
+    font-size: 15px;
+  }
+
+  .main-nav {
+    top: 92px;
+  }
+
+  .hero {
+    margin-top: 92px;
+  }
+
+  .hero h1,
+  .section h2,
+  .partnership-panel h2,
+  .contact-section h2 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .partnership-panel {
+    padding-inline: 20px;
+  }
+}
