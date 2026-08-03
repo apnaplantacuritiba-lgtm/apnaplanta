@@ -1450,8 +1450,16 @@ body {
 /* Corrige a imagem da seção Parceria no desktop */
 .image-panel {
   background-image: url("hero.jpg") !important;
-  background-size: 92% auto !important;
-  background-position: center center !important;
+  background-size: 86% auto !important;
+  background-position: right center !important;
   background-repeat: no-repeat !important;
   background-color: #0f2b23 !important;
+}
+
+/* Mantém a imagem inteira e centralizada em tablets e celulares */
+@media screen and (max-width: 980px) {
+  .image-panel {
+    background-size: contain !important;
+    background-position: center center !important;
+  }
 }
